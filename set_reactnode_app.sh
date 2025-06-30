@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "Hello! users,viewers,interviewers"
-echo "I am Tejas Kulkarni! I am creating this shell script to ease the setting up reactjs and nodejs project structure with docker files and docker-compose.yml."
-echo "Even though setting up react and node and dockerising there initial setup is easy but making those steps more easier will may help the students, developers starting there own."
+echo "Hello! users,viewers,interviewers, recruiters.... :)"
+echo "I am Tejas Kulkarni! I am creating this shell script to ease the setting up reactjs,nodejs project structure with there docker files and docker-compose.yml."
+echo "Even though setting up react,node and containerisation there initial setup is easy but making those steps more easier will help the students, developers starting there project on there own."
 
 # Setting react.js
 echo "Creating 2 directories: 1)client 2)server"
@@ -10,7 +10,7 @@ mkdir client server
 
 cd client/
 current_dir=$(pwd)
-echo "Now in client directory: $current_dir"
+echo "Now in the client directory: $current_dir"
 
 npx create-react-app .
 echo "Listing the current client directory"
@@ -34,5 +34,5 @@ app.listen(3001, (req, res)=>{
     console.log("Node started on port 3001")
 });
 EOF
-node index.js
+
 
