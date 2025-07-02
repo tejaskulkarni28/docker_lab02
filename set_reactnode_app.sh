@@ -17,6 +17,22 @@ echo "Listing the current client directory"
 list_current_dir=$(ls)
 echo "$list_current_dir"
 
+cat <<EOF >> Dockerfile
+FROM node:20-alpine
+
+WORKDIR client/
+
+COPY ./ ./
+
+RUN npm install
+
+COPY ./ ./
+
+EXPOSE 3000
+
+CMD ["npm","start"]
+EOF
+
 # Now let's setup the nodejs in server directory
 cd ../server
 current_dir=$(pwd)
@@ -35,4 +51,12 @@ app.listen(3001, (req, res)=>{
 });
 EOF
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> f4ddcbb (Added dockerfile text in shell scripting file)
 
